@@ -47,6 +47,44 @@ The dataset contains information on:
 - Completed Works
 - Ongoing Works
 - Wage Payment Percentage
+  
+# 🗂 Data Modelling
+
+The dashboard follows a **Star Schema** to improve performance and simplify data relationships.
+
+## Fact Table
+
+Contains the primary transactional data including:
+
+- Total Expenditure
+- Approved Labour Budget
+- Active Job Cards
+- Active Workers
+- Average Wage
+- Average Employment Days
+- Payment Percentage
+- Completed Works
+- Ongoing Works
+
+## Dimension Tables
+
+- Date
+- District
+- State
+- Work Category
+
+## Relationships
+
+- Date → Fact Table (1:*)
+
+- State → Fact Table (1:*)
+
+- District → Fact Table (1:*)
+
+- Work Category → Fact Table (1:*)
+
+<img width="648" height="394" alt="image" src="https://github.com/user-attachments/assets/bc0ad1d5-48bf-43c6-a2d8-59d882a0bc90" />
+
 
 ---
 
